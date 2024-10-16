@@ -31,6 +31,6 @@ def testing(request):
     mymembers = Member.objects.all().order_by('-firstname').values()
     template = loader.get_template('template.html')
     context = {
-        'mymembers': mymembers,
+        'fruits': ['Apple', 'Banana', 'Cherry'],
     }
     return HttpResponse(template.render(context, request))
