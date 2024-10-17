@@ -77,8 +77,12 @@ WSGI_APPLICATION = 'my_tennis_club.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'tennis_club_postgres',
+        'USER': 'postgres',
+        'PASSWORD': 'my$tr0ngPa$$w0rd',
+        'HOST': 'w3-django-project.cfuu4cwo8oh4.ap-south-1.rds.amazonaws.com',
+        'PORT': '5432'
     }
 }
 
